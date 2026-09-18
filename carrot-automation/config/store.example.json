@@ -1,0 +1,31 @@
+{
+  "store_name": "동네밥상 김치찌개",
+  "category": "음식점",
+  "owner_name": "김사장",
+  "region": "서울 관악구",
+  "neighborhood": "신림동",
+  "nearby_landmark": "신림역 3번 출구",
+  "tone": "친근한 동네 사장님",
+  "brand_color": "#FF6F0F",
+  "open_hours": "11:00 - 21:00",
+  "last_order": "20:30",
+  "closed_day": "일요일",
+  "signature_items": [
+    { "name": "묵은지 김치찌개", "price": 9000, "desc": "3년 묵힌 묵은지로 푹 끓여낸 대표 메뉴" },
+    { "name": "제육볶음 정식", "price": 10000, "desc": "직접 담근 양념에 하루 재운 앞다리살" },
+    { "name": "계란말이", "price": 6000, "desc": "주문 즉시 부치는 두툼한 계란말이" }
+  ],
+  "keywords": ["신림동 맛집", "혼밥", "점심 백반", "김치찌개"],
+  "cta": "당근 채팅으로 예약 주세요!",
+  "review_quotes": [
+    "혼자 먹어도 눈치 안 보여서 좋아요",
+    "국물이 진해서 해장으로 딱입니다",
+    "반찬이 계속 리필돼요"
+  ],
+  "channels": {
+    "daangn": true,
+    "threads": true,
+    "instagram": false,
+    "naver_blog": false
+  }
+}

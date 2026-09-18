@@ -1,0 +1,14 @@
+{
+  "_comment": "실제 사용 시 settings.json 으로 복사해서 쓰세요. settings.json 은 .gitignore 처리됩니다. 토큰은 절대 커밋하지 마세요.",
+  "weeks": 4,
+  "posts_per_week": 3,
+  "publish_days": ["화", "목", "토"],
+  "publish_time": "11:30",
+  "card_size": [1080, 1080],
+  "short_size": [1080, 1920],
+  "short_seconds_per_scene": 2.5,
+  "threads": {
+    "enabled": false,
+    "config_path": "../결과물/threads-auto-publish/config.json"
+  }
+}

@@ -1,0 +1,5 @@
+config/store.json
+config/settings.json
+output/
+*.mp4
+__pycache__/
