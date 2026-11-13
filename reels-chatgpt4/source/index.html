@@ -115,23 +115,42 @@
       .gi .tick { left: 0; top: 0; }
       #c-pop { position: absolute; left: 90px; top: 1080px; width: 900px; height: 160px; border-radius: 40px; background: var(--orange); color: var(--navy); font-size: 84px; font-weight: 900; display: flex; align-items: center; justify-content: center; letter-spacing: -0.03em; }
       #c-sub { position: absolute; left: 90px; top: 1262px; width: 900px; text-align: center; font-size: 44px; font-weight: 600; }
+    
+      .caps { top: 1210px; height: 170px; }
+      .cap { height: 170px; padding: 0 30px; font-size: 52px; line-height: 1.28; display: flex; align-items: center; justify-content: center; }
+      .cap span.t { display: block; text-align: center; word-break: keep-all; }
+      .cap b { margin: 0 0.16em; }
+      #hook .bg { background: var(--navy); }
+      #hk-small { position: absolute; left: 80px; top: 230px; font-size: 60px; font-weight: 800; color: #ffa25c; }
+      #hk-big { position: absolute; left: 80px; top: 320px; width: 920px; font-size: 132px; line-height: 1.1; font-weight: 900; letter-spacing: -0.03em; color: #fff; }
+      #hk-big span { display: block; }
+      .hchip { position: absolute; left: 80px; width: 920px; height: 118px; border-radius: 28px; background: #fff; display: flex; align-items: center; padding: 0 34px; font-size: 54px; font-weight: 800; color: var(--navy); }
+      .hchip i { font-style: normal; width: 70px; height: 70px; border-radius: 50%; background: var(--orange); color: var(--navy); font-size: 40px; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-right: 26px; }
+      .hchip em { font-style: normal; font-weight: 500; font-size: 36px; color: #4a5266; margin-left: 18px; }
+      #hook .cap { background: rgba(255,255,255,0.96); }
+      #k-photo svg { display: block; border-radius: 16px; }
+      .st svg { position: absolute; left: 17px; top: 6px; }
+      #c-title { width: 920px; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="37" data-width="1080" data-height="1920">
-      <!-- 0. HOOK -->
-      <div id="hook" class="clip scene" data-start="0" data-duration="5.6" data-track-index="1" data-track-kind="graphics" style="z-index: 2">
-        <div id="hk-a" class="hk" data-layout-ignore><img src="assets/v2_hook_a.jpg" alt="" /></div>
-        <div id="hk-b" class="hk" data-layout-ignore><img src="assets/v2_hook_b.jpg" alt="" /></div>
-        <div id="hook-scrim" data-layout-ignore></div>
-        <div id="hook-scrim2" data-layout-ignore></div>
-        <div id="hook-small">아직도 검색만 하세요?</div>
-        <div id="hook-big"><span class="o">ChatGPT</span><span>새 기능</span></div>
-        <div id="hook-pop">딱 4가지만 알려드려요</div>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="66.35" data-width="1080" data-height="1920">
+      <div id="hook" class="clip scene" data-start="0.0" data-duration="7.35" data-track-index="1" data-track-kind="graphics" style="z-index: 2">
+        <div class="bg"></div>
+        <div class="inner" id="hook-in">
+          <div id="hk-small">ChatGPT 새 기능</div>
+          <div id="hk-big"><span>다 따라갈</span><span>필요 없어요</span></div>
+          <div class="hchip" id="hc1" style="top: 640px"><i>1</i>Word<em>가정통신문 다듬기</em></div>
+          <div class="hchip" id="hc2" style="top: 776px"><i>2</i>Dots<em>일정 겹침 알림</em></div>
+          <div class="hchip" id="hc3" style="top: 912px"><i>3</i>Space<em>같이 쓰는 문서</em></div>
+          <div class="hchip" id="hc4" style="top: 1048px"><i>4</i>스티커팩<em>셀카 한 장</em></div>
+          <div class="caps">
+            <div class="cap" id="cap-h1"><span class="t">ChatGPT 새 기능, <b>다 따라갈 필요</b> 없어요</span></div>
+            <div class="cap" id="cap-h2"><span class="t">엄마와 선생님이 당장 쓸 <b>4가지</b>만 알려드릴게요</span></div>
+          </div>
+        </div>
       </div>
-
-      <!-- 1. WORD -->
-      <div id="word" class="clip scene" data-start="5.6" data-duration="6.8" data-track-index="1" data-track-kind="graphics" style="z-index: 3">
+      <div id="word" class="clip scene" data-start="7.35" data-duration="15.1" data-track-index="1" data-track-kind="graphics" style="z-index: 3">
         <div class="bg"></div>
         <div class="inner" id="word-in">
           <div class="badge"><b>1</b>/ 4</div>
@@ -160,15 +179,15 @@
           </div>
           <div class="chip" id="w-chip">무료 플랜도 사용 가능</div>
           <div class="caps">
-            <div class="cap" id="w-c1">공식 <b>추가 기능</b>으로 설치하면</div>
-            <div class="cap" id="w-c2">창을 옮겨 다닐 필요 없이</div>
-            <div class="cap" id="w-c3">문서를 <b>그 자리에서</b> 고쳐요</div>
+            <div class="cap" id="cap-w1"><span class="t">첫 번째, <b>워드</b>예요</span></div>
+            <div class="cap" id="cap-w2"><span class="t">워드 안에 ChatGPT가 <b>공식으로</b> 들어왔어요</span></div>
+            <div class="cap" id="cap-w3"><span class="t">가정통신문을 열고 <b>읽기 쉽게</b> 바꿔 달라고 하면</span></div>
+            <div class="cap" id="cap-w4"><span class="t">창을 옮길 필요 없이 <b>그 자리에서</b> 고쳐져요</span></div>
+            <div class="cap" id="cap-w5"><span class="t"><b>무료 플랜</b>도 됩니다</span></div>
           </div>
         </div>
       </div>
-
-      <!-- 2. DOTS -->
-      <div id="dots" class="clip scene" data-start="12.4" data-duration="7" data-track-index="1" data-track-kind="graphics" style="z-index: 4">
+      <div id="dots" class="clip scene" data-start="22.45" data-duration="13.15" data-track-index="1" data-track-kind="graphics" style="z-index: 4">
         <div class="bg"></div>
         <div class="inner" id="dots-in">
           <div class="badge"><b>2</b>/ 4</div>
@@ -195,15 +214,14 @@
           </div>
           <div class="chip">요금제별로 순차 제공 중</div>
           <div class="caps">
-            <div class="cap" id="d-c1">맡긴 일을 <b>계속</b> 지켜보다가</div>
-            <div class="cap" id="d-c2">문제가 생기면</div>
-            <div class="cap" id="d-c3">먼저 <b>폰으로</b> 알려줘요</div>
+            <div class="cap" id="cap-d1"><span class="t">두 번째, <b>Dots</b>예요</span></div>
+            <div class="cap" id="cap-d2"><span class="t"><b>24시간</b> 일하는 에이전트인데요</span></div>
+            <div class="cap" id="cap-d3"><span class="t">캘린더를 연결해 두면 일정을 <b>계속</b> 지켜보다가</span></div>
+            <div class="cap" id="cap-d4"><span class="t">학원 시간과 약속이 겹치면 <b>폰으로</b> 먼저 알려줘요</span></div>
           </div>
         </div>
       </div>
-
-      <!-- 3. SPACE -->
-      <div id="space" class="clip scene" data-start="19.4" data-duration="6.2" data-track-index="1" data-track-kind="graphics" style="z-index: 5">
+      <div id="space" class="clip scene" data-start="35.6" data-duration="12.95" data-track-index="1" data-track-kind="graphics" style="z-index: 5">
         <div class="bg"></div>
         <div class="inner" id="space-in">
           <div class="badge"><b>3</b>/ 4</div>
@@ -229,54 +247,51 @@
           </div>
           <div class="chip">Pro · Business · Enterprise</div>
           <div class="caps">
-            <div class="cap" id="s-c1">ChatGPT가 들어 있는 문서를</div>
-            <div class="cap" id="s-c2">동료 선생님께 <b>공유</b>하면</div>
-            <div class="cap" id="s-c3"><b>같은 화면</b>에서 함께 작업해요</div>
+            <div class="cap" id="cap-s1"><span class="t">세 번째, <b>Space</b>예요</span></div>
+            <div class="cap" id="cap-s2"><span class="t">ChatGPT가 들어 있는 문서를 동료와 <b>같이 쓰는</b> 공간이에요</span></div>
+            <div class="cap" id="cap-s3"><span class="t">수업 계획서를 공유하면 <b>같은 화면</b>에서 함께 고치고</span></div>
+            <div class="cap" id="cap-s4"><span class="t">남은 할 일도 <b>나눠</b> 줘요</span></div>
           </div>
         </div>
       </div>
-
-      <!-- 4. STICKER -->
-      <div id="stick" class="clip scene" data-start="25.6" data-duration="5.8" data-track-index="1" data-track-kind="graphics" style="z-index: 6">
+      <div id="stick" class="clip scene" data-start="48.55" data-duration="8.9" data-track-index="1" data-track-kind="graphics" style="z-index: 6">
         <div class="bg"></div>
         <div class="inner" id="stick-in">
           <div class="badge"><b>4</b>/ 4</div>
           <div class="title"><span>사진 한 장으로</span><span class="o">내 얼굴 스티커팩</span></div>
           <div class="mock">
-            <div class="card" id="k-photo"><img src="assets/v2_me.jpg" alt="" /><p>셀카 1장</p></div>
+            <div class="card" id="k-photo"><svg width="290" height="290" viewBox="0 0 100 100"><rect width="100" height="100" fill="#dfe8f5"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="38" cy="52" r="5" fill="#1b2a4a"/><circle cx="62" cy="52" r="5" fill="#1b2a4a"/><path d="M43 70q7 6 14 0" fill="none" stroke="#b3341a" stroke-width="5" stroke-linecap="round"/></svg><p>셀카 1장</p></div>
             <svg id="k-arrow" width="90" height="70" viewBox="0 0 90 70"><path id="k-apath" d="M6 35h66M52 12l24 23-24 23" fill="none" stroke="#f27a2b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" /></svg>
             <div class="card" id="k-grid" data-layout-ignore>
-              <div class="st" style="left: 24px; top: 24px; background: #ffe2c9"><img src="assets/v2_me.jpg" alt="" /><em>최고!</em></div>
-              <div class="st" style="left: 181px; top: 24px; background: #dfeaff"><img src="assets/v2_me2.jpg" alt="" /><em>헉</em></div>
-              <div class="st" style="left: 338px; top: 24px; background: #e3f5e1"><img src="assets/v2_me3.jpg" alt="" /><em>좋아요</em></div>
-              <div class="st" style="left: 24px; top: 194px; background: #f3e3ff"><img src="assets/v2_me4.jpg" alt="" /><em>ㅋㅋㅋ</em></div>
-              <div class="st" style="left: 181px; top: 194px; background: #fff3c4"><img src="assets/v2_me.jpg" alt="" /><em>감사</em></div>
-              <div class="st" style="left: 338px; top: 194px; background: #ffdede"><img src="assets/v2_me3.jpg" alt="" /><em>화이팅</em></div>
-              <div class="st" style="left: 24px; top: 364px; background: #d9f3f5"><img src="assets/v2_me2.jpg" alt="" /><em>퇴근</em></div>
-              <div class="st" style="left: 181px; top: 364px; background: #ffe2c9"><img src="assets/v2_me4.jpg" alt="" /><em>오케이</em></div>
-              <div class="st" style="left: 338px; top: 364px; background: #e9e6ff"><img src="assets/v2_me.jpg" alt="" /><em>졸려</em></div>
+              <div class="st" style="left: 24px; top: 24px; background: #ffe2c9"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#ffe2c9"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><path d="M32 53q6-7 12 0M56 53q6-7 12 0" fill="none" stroke="#1b2a4a" stroke-width="4" stroke-linecap="round"/><path d="M36 66h28q-2 16-14 16t-14-16z" fill="#b3341a"/></svg><em>최고!</em></div>
+              <div class="st" style="left: 181px; top: 24px; background: #dfeaff"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#dfeaff"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="38" cy="52" r="7" fill="#fff" stroke="#1b2a4a" stroke-width="3"/><circle cx="62" cy="52" r="7" fill="#fff" stroke="#1b2a4a" stroke-width="3"/><circle cx="38" cy="52" r="3" fill="#1b2a4a"/><circle cx="62" cy="52" r="3" fill="#1b2a4a"/><ellipse cx="50" cy="72" rx="7" ry="9" fill="#b3341a"/></svg><em>헉</em></div>
+              <div class="st" style="left: 338px; top: 24px; background: #e3f5e1"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#e3f5e1"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="38" cy="52" r="5" fill="#1b2a4a"/><path d="M56 53q6-6 12 0" fill="none" stroke="#1b2a4a" stroke-width="4" stroke-linecap="round"/><path d="M38 68q12 12 24 0" fill="none" stroke="#b3341a" stroke-width="5" stroke-linecap="round"/></svg><em>좋아요</em></div>
+              <div class="st" style="left: 24px; top: 194px; background: #f3e3ff"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#f3e3ff"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><path d="M32 53q6-7 12 0M56 53q6-7 12 0" fill="none" stroke="#1b2a4a" stroke-width="4" stroke-linecap="round"/><path d="M36 66h28q-2 16-14 16t-14-16z" fill="#b3341a"/></svg><em>ㅋㅋㅋ</em></div>
+              <div class="st" style="left: 181px; top: 194px; background: #fff3c4"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#fff3c4"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><path d="M32 53q6-7 12 0M56 53q6-7 12 0" fill="none" stroke="#1b2a4a" stroke-width="4" stroke-linecap="round"/><path d="M43 70q7 6 14 0" fill="none" stroke="#b3341a" stroke-width="5" stroke-linecap="round"/></svg><em>감사</em></div>
+              <div class="st" style="left: 338px; top: 194px; background: #ffdede"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#ffdede"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="38" cy="52" r="5" fill="#1b2a4a"/><circle cx="62" cy="52" r="5" fill="#1b2a4a"/><path d="M36 66h28q-2 16-14 16t-14-16z" fill="#b3341a"/></svg><em>화이팅</em></div>
+              <div class="st" style="left: 24px; top: 364px; background: #d9f3f5"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#d9f3f5"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="38" cy="52" r="5" fill="#1b2a4a"/><circle cx="62" cy="52" r="5" fill="#1b2a4a"/><path d="M38 68q12 12 24 0" fill="none" stroke="#b3341a" stroke-width="5" stroke-linecap="round"/></svg><em>퇴근</em></div>
+              <div class="st" style="left: 181px; top: 364px; background: #ffe2c9"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#ffe2c9"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="38" cy="52" r="5" fill="#1b2a4a"/><path d="M56 53q6-6 12 0" fill="none" stroke="#1b2a4a" stroke-width="4" stroke-linecap="round"/><path d="M43 70q7 6 14 0" fill="none" stroke="#b3341a" stroke-width="5" stroke-linecap="round"/></svg><em>오케이</em></div>
+              <div class="st" style="left: 338px; top: 364px; background: #e9e6ff"><svg style="border-radius:50%" width="104" height="104" viewBox="0 0 100 100"><rect width="100" height="100" fill="#e9e6ff"/><path d="M14 62q-8-50 36-52q44 2 36 52q-2 14-10 18l-52 0q-8-4-10-18z" fill="#3a2a26"/><circle cx="50" cy="56" r="28" fill="#ffd9b8"/><path d="M22 50q6-26 28-24q22-2 28 24q-14-16-28-12q-14-4-28 12z" fill="#3a2a26"/><circle cx="30" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ffb3a0" opacity=".7"/><path d="M32 52h12M56 52h12" stroke="#1b2a4a" stroke-width="4" stroke-linecap="round"/><path d="M40 72h20" stroke="#b3341a" stroke-width="5" stroke-linecap="round"/></svg><em>졸려</em></div>
             </div>
           </div>
           <div class="chip">이미지 메뉴 › 스티커</div>
           <div class="caps">
-            <div class="cap" id="k-c1">셀카를 올리고 <b>스타일</b>만 고르면</div>
-            <div class="cap" id="k-c2">표정별 <b>맞춤 스티커</b>가 나와요</div>
+            <div class="cap" id="cap-k1"><span class="t">네 번째, <b>스티커팩</b>이에요</span></div>
+            <div class="cap" id="cap-k2"><span class="t">셀카 한 장 올리고 <b>스타일</b>만 고르면</span></div>
+            <div class="cap" id="cap-k3"><span class="t">내 얼굴로 <b>표정 스티커</b>가 만들어져요</span></div>
           </div>
         </div>
       </div>
-
-      <!-- 5. CTA -->
-      <div id="cta" class="clip scene" data-start="31.4" data-duration="5.6" data-track-index="1" data-track-kind="graphics" style="z-index: 7">
+      <div id="cta" class="clip scene" data-start="57.45" data-duration="8.9" data-track-index="1" data-track-kind="graphics" style="z-index: 7">
         <div class="bg"></div>
         <div class="inner" id="cta-in">
-          <img id="c-me" src="assets/v2_me2.jpg" alt="" />
           <div id="c-title"><span>4가지 설정법,</span><span class="o">PDF로 정리했어요</span></div>
           <div class="card" id="c-guide">
             <h5>무료 PDF 가이드</h5>
             <h4>ChatGPT 새 기능 설정법</h4>
             <div class="gi"><div class="box"><div class="tick" id="c-t1"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M5 14l6 6 12-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>Word <i>추가 기능 설치</i></div>
             <div class="gi"><div class="box"><div class="tick" id="c-t2"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M5 14l6 6 12-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>Dots <i>캘린더 연결</i></div>
-            <div class="gi"><div class="box"><div class="tick" id="c-t3"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M5 14l6 6 12-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>Space <i>팀원 초대</i></div>
+            <div class="gi"><div class="box"><div class="tick" id="c-t3"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M5 14l6 6 12-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>Space <i>동료 초대</i></div>
             <div class="gi"><div class="box"><div class="tick" id="c-t4"><svg width="28" height="28" viewBox="0 0 28 28"><path d="M5 14l6 6 12-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div>스티커 <i>사진 선택</i></div>
           </div>
           <div id="c-pop">댓글에 ‘가이드’</div>
@@ -284,82 +299,71 @@
         </div>
       </div>
 
-      <audio id="bgm" class="clip" src="assets/audio/bgm.wav" data-start="0" data-duration="37" data-volume="0.5" data-track-index="11"></audio>
-      <audio id="sfx-pop1" class="clip" src="assets/audio/pop.mp3" data-start="2.6" data-volume="0.5" data-track-index="12"></audio>
-      <audio id="sfx-w1" class="clip" src="assets/audio/whoosh-short.mp3" data-start="5.5" data-volume="0.3" data-track-index="13"></audio>
-      <audio id="sfx-w2" class="clip" src="assets/audio/whoosh-short.mp3" data-start="12.3" data-volume="0.3" data-track-index="14"></audio>
-      <audio id="sfx-n" class="clip" src="assets/audio/notification.mp3" data-start="16.5" data-volume="0.45" data-track-index="15"></audio>
-      <audio id="sfx-w3" class="clip" src="assets/audio/whoosh-short.mp3" data-start="19.3" data-volume="0.3" data-track-index="16"></audio>
-      <audio id="sfx-w4" class="clip" src="assets/audio/whoosh-short.mp3" data-start="25.5" data-volume="0.3" data-track-index="17"></audio>
-      <audio id="sfx-w5" class="clip" src="assets/audio/whoosh-short.mp3" data-start="31.3" data-volume="0.3" data-track-index="18"></audio>
-      <audio id="sfx-pop2" class="clip" src="assets/audio/pop.mp3" data-start="33.6" data-volume="0.5" data-track-index="19"></audio>
+      <audio id="bgm" class="clip" src="assets/audio/bgm_long.wav" data-start="0" data-duration="66.35" data-volume="0.5" data-track-index="10"></audio>
+      <audio id="sfx11" class="clip" src="assets/audio/whoosh-short.mp3" data-start="7.25" data-volume="0.22" data-track-index="11"></audio>
+      <audio id="sfx12" class="clip" src="assets/audio/whoosh-short.mp3" data-start="22.35" data-volume="0.22" data-track-index="12"></audio>
+      <audio id="sfx13" class="clip" src="assets/audio/whoosh-short.mp3" data-start="35.5" data-volume="0.22" data-track-index="13"></audio>
+      <audio id="sfx14" class="clip" src="assets/audio/whoosh-short.mp3" data-start="48.45" data-volume="0.22" data-track-index="14"></audio>
+      <audio id="sfx15" class="clip" src="assets/audio/whoosh-short.mp3" data-start="57.35" data-volume="0.22" data-track-index="15"></audio>
+      <audio id="sfx16" class="clip" src="assets/audio/pop.mp3" data-start="0.35" data-volume="0.4" data-track-index="16"></audio>
+      <audio id="sfx17" class="clip" src="assets/audio/notification.mp3" data-start="32.95" data-volume="0.35" data-track-index="17"></audio>
+      <audio id="sfx18" class="clip" src="assets/audio/pop.mp3" data-start="60.85" data-volume="0.4" data-track-index="18"></audio>
     </div>
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
+      const T = {"h1": 0.35, "h2": 3.5, "w1": 7.7, "w2": 9.55, "w3": 13.1, "w4": 16.95, "w5": 20.4, "d1": 22.8, "d2": 24.65, "d3": 27.5, "d4": 31.35, "s1": 35.95, "s2": 37.9, "s3": 42.35, "s4": 46.2, "k1": 48.9, "k2": 51.15, "k3": 54.1, "c1": 57.8, "c2": 60.85, "c3": 63.7};
+      const D = {"h1": 2.9, "h2": 3.4, "w1": 1.6, "w2": 3.3, "w3": 3.6, "w4": 3.2, "w5": 1.6, "d1": 1.6, "d2": 2.6, "d3": 3.6, "d4": 3.8, "s1": 1.7, "s2": 4.2, "s3": 3.6, "s4": 1.9, "k1": 2.0, "k2": 2.7, "k3": 2.9, "c1": 2.8, "c2": 2.6, "c3": 1.6};
+      const S = {"hook": 0.0, "word": 7.35, "dots": 22.45, "space": 35.6, "stick": 48.55, "cta": 57.45};
+      const SCN = [["hook", ["h1", "h2"]], ["word", ["w1", "w2", "w3", "w4", "w5"]], ["dots", ["d1", "d2", "d3", "d4"]], ["space", ["s1", "s2", "s3", "s4"]], ["stick", ["k1", "k2", "k3"]], ["cta", ["c1", "c2", "c3"]]];
       const IN = (sel, t) => tl.fromTo(sel, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, t);
-      const caps = (ids, t0, each) => ids.forEach((id, i) => {
-        const t = t0 + i * each;
-        tl.fromTo(id, { opacity: 0 }, { opacity: 1, duration: 0.2 }, t);
-        if (i < ids.length - 1) tl.to(id, { opacity: 0, duration: 0.15 }, t + each - 0.15);
-      });
       const pop = (sel, t) => {
         tl.fromTo(sel, { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(3)" }, t);
-        tl.fromTo(sel, { rotation: -2 }, { rotation: 0, duration: 0.3, ease: "elastic.out(1.2,0.3)" }, t + 0.3);
+        tl.to(sel, { rotation: -2, duration: 0.06 }, t + 0.4);
+        tl.to(sel, { rotation: 0, duration: 0.3, ease: "elastic.out(1.2,0.3)" }, t + 0.46);
       };
-
-      /* 0 hook */
-      tl.fromTo("#hook-big span", { opacity: 0.001, x: -40 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.12, ease: "power3.out" }, 0.05);
-      pop("#hook-pop", 2.6);
-      tl.fromTo("#hk-a", { scale: 1 }, { scale: 1.07, duration: 2.6, ease: "none" }, 0);
-      tl.set("#hk-b", { opacity: 1 }, 2.6);
-      tl.to("#hook-small", { opacity: 0, duration: 0.15 }, 2.45);
-      tl.to("#hook-big", { opacity: 0, duration: 0.15 }, 2.45);
-      tl.to("#hook-scrim", { opacity: 0, duration: 0.15 }, 2.45);
-      tl.fromTo("#hk-b", { scale: 1.12 }, { scale: 1.02, duration: 0.25, ease: "power3.out" }, 2.6);
-      tl.to("#hk-b", { scale: 1.08, duration: 2.75, ease: "none" }, 2.85);
-
-      /* 1 word */
-      IN("#word-in", 5.6);
-      tl.fromTo("#w-side", { x: 380 }, { x: 0, duration: 0.5, ease: "power3.out" }, 6.2);
-      tl.fromTo("#w-ask", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, 7.4);
-      tl.fromTo("#w-new", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 9.4);
-      tl.fromTo("#w-old", { opacity: 1 }, { opacity: 0, duration: 0.3 }, 9.4);
-      tl.fromTo("#w-ans", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, 9.7);
-      caps(["#w-c1", "#w-c2", "#w-c3"], 6.0, 2.1);
-
-      /* 2 dots */
-      IN("#dots-in", 12.4);
-      tl.fromTo("#d-clash", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.3 }, 15.0);
-      tl.fromTo("#d-noti", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.6)" }, 16.5);
-      caps(["#d-c1", "#d-c2", "#d-c3"], 12.8, 2.15);
-
-      /* 3 space */
-      IN("#space-in", 19.4);
-      tl.fromTo("#s-a2", { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, 21.6);
-      tl.fromTo("#s-a3", { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, 21.9);
-      tl.fromTo("#s-k1", { x: 700, y: 120, opacity: 0 }, { x: 360, y: 190, opacity: 1, duration: 0.8, ease: "power2.inOut" }, 20.0);
-      tl.to("#s-k1", { x: 480, y: 265, duration: 0.8, ease: "power2.inOut" }, 22.6);
-      tl.fromTo("#s-k2", { x: 860, y: 520, opacity: 0 }, { x: 600, y: 340, opacity: 1, duration: 0.8, ease: "power2.inOut" }, 21.7);
-      tl.to("#s-k2", { x: 660, y: 410, duration: 0.9, ease: "power2.inOut" }, 23.6);
-      tl.fromTo("#s-t1", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(3)" }, 20.9);
-      tl.fromTo("#s-t2", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(3)" }, 23.5);
-      tl.fromTo("#s-ask", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, 23.9);
-      caps(["#s-c1", "#s-c2", "#s-c3"], 19.8, 1.9);
-
-      /* 4 sticker */
-      IN("#stick-in", 25.6);
-      tl.fromTo("#k-apath", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5 }, 26.6);
-      tl.fromTo("#k-grid .st", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.35, stagger: 0.13, ease: "back.out(2.2)" }, 27.2);
-      caps(["#k-c1", "#k-c2"], 26.0, 2.6);
-
-      /* 5 cta */
-      IN("#cta-in", 31.4);
-      tl.fromTo("#c-guide .tick", { scale: 0 }, { scale: 1, duration: 0.25, stagger: 0.25, ease: "back.out(3)" }, 32.2);
-      pop("#c-pop", 33.6);
-      tl.fromTo("#c-sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 34.3);
-      tl.to("#c-pop", { scale: 1.05, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, 34.8);
-
+      SCN.forEach(([sid, ids]) => ids.forEach((id, i) => {
+        tl.fromTo("#cap-" + id, { opacity: 0 }, { opacity: 1, duration: 0.2 }, T[id]);
+        if (i < ids.length - 1) tl.to("#cap-" + id, { opacity: 0, duration: 0.12 }, T[ids[i + 1]] - 0.12);
+      }));
+      /* hook */
+      tl.fromTo("#hk-small", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25 }, 0.02);
+      tl.fromTo("#hk-big span", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, stagger: 0.14, ease: "back.out(2.4)", transformOrigin: "0% 50%" }, T.h1);
+      tl.fromTo(".hchip", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.35, stagger: Math.min(0.5, D.h2 / 5), ease: "power3.out" }, T.h2 + 0.2);
+      /* word */
+      IN("#word-in", S.word);
+      tl.fromTo("#w-side", { x: 380 }, { x: 0, duration: 0.5, ease: "power3.out" }, T.w2 + 0.3);
+      tl.fromTo("#w-ask", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, T.w3 + 0.8);
+      tl.fromTo("#w-new", { opacity: 0 }, { opacity: 1, duration: 0.35 }, T.w4 + 0.6);
+      tl.fromTo("#w-old", { opacity: 1 }, { opacity: 0, duration: 0.3 }, T.w4 + 0.6);
+      tl.fromTo("#w-ans", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, T.w4 + 1.0);
+      tl.fromTo("#w-chip", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, T.w5);
+      /* dots */
+      IN("#dots-in", S.dots);
+      tl.fromTo("#d-phone", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.4 }, T.d2 + 0.2);
+      tl.fromTo("#d-run", { opacity: 0 }, { opacity: 1, duration: 0.3 }, T.d3 + 0.8);
+      tl.fromTo("#d-clash", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.3 }, T.d4 + 0.5);
+      tl.fromTo("#d-noti", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.6)" }, T.d4 + 1.6);
+      /* space */
+      IN("#space-in", S.space);
+      tl.fromTo("#s-a2", { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, T.s2 + 1.6);
+      tl.fromTo("#s-a3", { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, T.s2 + 1.9);
+      tl.fromTo("#s-k1", { x: 700, y: 120, opacity: 0 }, { x: 360, y: 190, opacity: 1, duration: 0.8, ease: "power2.inOut" }, T.s2 + 1.6);
+      tl.fromTo("#s-t1", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(3)" }, T.s3 + 0.4);
+      tl.to("#s-k1", { x: 480, y: 265, duration: 0.8, ease: "power2.inOut" }, T.s3 + 0.8);
+      tl.fromTo("#s-k2", { x: 860, y: 520, opacity: 0 }, { x: 600, y: 340, opacity: 1, duration: 0.8, ease: "power2.inOut" }, T.s3 + 0.2);
+      tl.fromTo("#s-t2", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(3)" }, T.s3 + 1.8);
+      tl.to("#s-k2", { x: 660, y: 410, duration: 0.9, ease: "power2.inOut" }, T.s3 + 2.0);
+      tl.fromTo("#s-ask", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, T.s4);
+      /* sticker */
+      IN("#stick-in", S.stick);
+      tl.fromTo("#k-apath", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5 }, T.k2 + 1.2);
+      tl.fromTo("#k-grid .st", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.35, stagger: Math.min(0.2, D.k3 / 12), ease: "back.out(2.2)" }, T.k3);
+      /* cta */
+      IN("#cta-in", S.cta);
+      tl.fromTo("#c-guide .tick", { scale: 0 }, { scale: 1, duration: 0.25, stagger: 0.3, ease: "back.out(3)" }, T.c1 + 0.6);
+      pop("#c-pop", T.c2);
+      tl.fromTo("#c-sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, T.c3);
       window.__timelines["main"] = tl;
       tl.seek(0);
     </script>
